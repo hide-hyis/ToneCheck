@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToneCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検査音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDv-8x-TmE">
+                                <rect key="frame" x="30" y="303.66666666666669" width="90" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7x-QL-TH5">
+                                <rect key="frame" x="306.33333333333331" y="307.66666666666669" width="53.666666666666686" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2" catalog="system"/>
+                                <connections>
+                                    <action selector="showSpeakerPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdE-An-7T6"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rbg-Tn-M6s">
+                                <rect key="frame" x="30" y="362" width="330" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-iW-j6h">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Tji-ZW-Icw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1000Hz 40db" image="button.programmable" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapFirstSoundOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQt-rQ-9Im"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-9R-TTm">
+                                        <rect key="frame" x="0.0" y="60" width="330" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="MxB-JM-qYv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="2000Hz 40db" image="circle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSecondSoundOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBY-4s-QMg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZO3-9R-TTm" firstAttribute="top" secondItem="q3L-iW-j6h" secondAttribute="bottom" id="Bsx-jh-Zdl"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqV-bc-cHj">
+                                <rect key="frame" x="135" y="532" width="120" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="JJu-yD-6QT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="検査音開始X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSoundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdv-Le-PMm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rbg-Tn-M6s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="00j-rC-35i"/>
+                            <constraint firstItem="rbg-Tn-M6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HHn-rV-64q"/>
+                            <constraint firstItem="rbg-Tn-M6s" firstAttribute="top" secondItem="T7x-QL-TH5" secondAttribute="bottom" constant="20" id="I2H-CP-EAc"/>
+                            <constraint firstItem="tDv-8x-TmE" firstAttribute="leading" secondItem="rbg-Tn-M6s" secondAttribute="leading" id="bZL-lc-UDY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rbg-Tn-M6s" secondAttribute="trailing" constant="30" id="fwT-aH-7w3"/>
+                            <constraint firstItem="MqV-bc-cHj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gpk-2d-MMK"/>
+                            <constraint firstItem="rbg-Tn-M6s" firstAttribute="top" secondItem="tDv-8x-TmE" secondAttribute="bottom" constant="20" id="lNf-lN-RR1"/>
+                            <constraint firstItem="rbg-Tn-M6s" firstAttribute="trailing" secondItem="T7x-QL-TH5" secondAttribute="trailing" id="o0q-lh-nxt"/>
+                            <constraint firstItem="MqV-bc-cHj" firstAttribute="top" secondItem="rbg-Tn-M6s" secondAttribute="bottom" constant="50" id="pOf-0Y-zbF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MqV-bc-cHj" secondAttribute="bottom" constant="50" id="zNk-Ys-Ri3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstSoundOptionButton" destination="q3L-iW-j6h" id="Msf-PB-dN6"/>
+                        <outlet property="secondSoundOptionButton" destination="ZO3-9R-TTm" id="znf-3V-fuc"/>
+                        <outlet property="soundButton" destination="MqV-bc-cHj" id="DVp-Qu-03S"/>
+                        <outlet property="soundButtonWidthConstraint" destination="JJu-yD-6QT" id="hH2-uP-MBQ"/>
+                        <outlet property="soundOptionStackView" destination="rbg-Tn-M6s" id="MT9-4U-sah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button.programmable" catalog="system" width="128" height="123"/>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="speaker.wave.2" catalog="system" width="128" height="88"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
