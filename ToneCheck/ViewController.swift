@@ -49,13 +49,20 @@ class ViewController: UIViewController {
     
     @IBAction func didTapFirstSoundOption(_ sender: Any) {
         self.frequencyType = .low
+        AudioManager.shared.updateFrequency(self.frequencyType.rawValue)
     }
     
     @IBAction func didTapSecondSoundOption(_ sender: Any) {
         self.frequencyType = .heigh
+        AudioManager.shared.updateFrequency(self.frequencyType.rawValue)
     }
     
     @IBAction func didTapSoundButton(_ sender: Any) {
+        if isSoundOn {
+            AudioManager.shared.finish()
+        } else {
+            AudioManager.shared.start()
+        }
         isSoundOn.toggle()
     }
     
