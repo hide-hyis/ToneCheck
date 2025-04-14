@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     private let toolbar = UIToolbar()
     private let pickerContainerView = UIView()
     
-    let speakerPickerDataSource =  ["Google", "Apple", "Facebook", "Amazon"]
+    let speakerPickerDataSource =  ["0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0"]
     
     /// 検査中フラグ
     private var isSoundOn = false {
@@ -49,13 +49,20 @@ class ViewController: UIViewController {
     
     @IBAction func didTapFirstSoundOption(_ sender: Any) {
         self.frequencyType = .low
+        AudioManager.shared.updateFrequency(self.frequencyType.rawValue)
     }
     
     @IBAction func didTapSecondSoundOption(_ sender: Any) {
         self.frequencyType = .heigh
+        AudioManager.shared.updateFrequency(self.frequencyType.rawValue)
     }
     
     @IBAction func didTapSoundButton(_ sender: Any) {
+        if isSoundOn {
+            AudioManager.shared.finish()
+        } else {
+            AudioManager.shared.start()
+        }
         isSoundOn.toggle()
     }
     
@@ -123,8 +130,8 @@ class ViewController: UIViewController {
     
     @objc private func doneTapped() {
         let selectedRow = pickerView.selectedRow(inComponent: 0)
-//        selectedValue = self.speakerPickerDataSource[selectedRow]
-
+        guard let volume = Double(self.speakerPickerDataSource[selectedRow]) else { return }
+        AudioManager.shared.updateVolume(volume)
         self.hidePickerView(isHidden: true)
     }
     

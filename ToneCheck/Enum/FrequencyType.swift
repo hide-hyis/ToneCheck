@@ -7,9 +7,9 @@
 
 import Foundation
 
-internal enum FrequencyType {
-    case low
-    case heigh
+internal enum FrequencyType: Double {
+    case low = 1000
+    case heigh = 2000
     
     var isLow: Bool {
         return self == .low

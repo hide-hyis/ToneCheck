@@ -16,6 +16,10 @@
 		086730CD2D8AF3D80088C69C /* ToneCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730CC2D8AF3D80088C69C /* ToneCheckTests.swift */; };
 		086730D72D8AF3D80088C69C /* ToneCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730D62D8AF3D80088C69C /* ToneCheckUITests.swift */; };
 		086730D92D8AF3D80088C69C /* ToneCheckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730D82D8AF3D80088C69C /* ToneCheckUITestsLaunchTests.swift */; };
+		086730F62D8EB0330088C69C /* FrequencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730F42D8EB0330088C69C /* FrequencyType.swift */; };
+		086730F92D8EB03F0088C69C /* UIColor+hexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */; };
+		086730FB2D8EB0A10088C69C /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730FA2D8EB0A10088C69C /* AudioManager.swift */; };
+		086849612DACB5D400EE5342 /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086849602DACB5D400EE5342 /* Double+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		086730D22D8AF3D80088C69C /* ToneCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToneCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086730D62D8AF3D80088C69C /* ToneCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneCheckUITests.swift; sourceTree = "<group>"; };
 		086730D82D8AF3D80088C69C /* ToneCheckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneCheckUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		086730F42D8EB0330088C69C /* FrequencyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyType.swift; sourceTree = "<group>"; };
+		086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexInit.swift"; sourceTree = "<group>"; };
+		086730FA2D8EB0A10088C69C /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		086849602DACB5D400EE5342 /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +107,11 @@
 		086730B42D8AF3D40088C69C /* ToneCheck */ = {
 			isa = PBXGroup;
 			children = (
+				086730F52D8EB0330088C69C /* Enum */,
+				086730F82D8EB03F0088C69C /* Extension */,
 				086730B52D8AF3D40088C69C /* AppDelegate.swift */,
 				086730B72D8AF3D40088C69C /* SceneDelegate.swift */,
+				086730FA2D8EB0A10088C69C /* AudioManager.swift */,
 				086730B92D8AF3D40088C69C /* ViewController.swift */,
 				086730BB2D8AF3D40088C69C /* Main.storyboard */,
 				086730BE2D8AF3D80088C69C /* Assets.xcassets */,
@@ -126,6 +137,24 @@
 			);
 			path = ToneCheckUITests;
 			sourceTree = "<group>";
+		};
+		086730F52D8EB0330088C69C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				086730F42D8EB0330088C69C /* FrequencyType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		086730F82D8EB03F0088C69C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */,
+				086849602DACB5D400EE5342 /* Double+extension.swift */,
+			);
+			name = Extension;
+			path = ToneCheck/Extension;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -258,9 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086730FB2D8EB0A10088C69C /* AudioManager.swift in Sources */,
 				086730BA2D8AF3D40088C69C /* ViewController.swift in Sources */,
 				086730B62D8AF3D40088C69C /* AppDelegate.swift in Sources */,
+				086730F92D8EB03F0088C69C /* UIColor+hexInit.swift in Sources */,
+				086730F62D8EB0330088C69C /* FrequencyType.swift in Sources */,
 				086730B82D8AF3D40088C69C /* SceneDelegate.swift in Sources */,
+				086849612DACB5D400EE5342 /* Double+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
