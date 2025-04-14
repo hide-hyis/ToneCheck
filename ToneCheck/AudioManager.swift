@@ -15,6 +15,7 @@ class AudioManager {
     private let playerNode = AVAudioPlayerNode()
     private let session = AVAudioSession.sharedInstance()
     private var frequency = 1000.0
+    private var volume: Double = 1
     
     func start() {
         try! session.setCategory(.playback, mode: .default)
@@ -22,7 +23,7 @@ class AudioManager {
         
         let audioFormat = makeAudioFormat(sampleRate: 44100.0, channel: 2)  //サンプリング周波数44.1kHz、2channelで作成
         let buffer = makePCMBuffer(audioFormat: audioFormat)                //再生用Bufferを作成
-        buffer.makeSignWave(frequency: self.frequency, soundVolume: 1)
+        buffer.makeSignWave(frequency: self.frequency, soundVolume: self.volume)
         
         audioEngine.attach(playerNode)
         audioEngine.connect(playerNode, to: audioEngine.outputNode, format: audioFormat)
@@ -49,6 +50,10 @@ class AudioManager {
     
     func updateFrequency(_ frequency: Double) {
         self.frequency = frequency
+    }
+    
+    func updateVolume(_ volume: Double) {
+        self.volume = volume
     }
     
     //AudioFormatを作成

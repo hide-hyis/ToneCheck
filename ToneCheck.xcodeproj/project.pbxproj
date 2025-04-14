@@ -19,6 +19,7 @@
 		086730F62D8EB0330088C69C /* FrequencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730F42D8EB0330088C69C /* FrequencyType.swift */; };
 		086730F92D8EB03F0088C69C /* UIColor+hexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */; };
 		086730FB2D8EB0A10088C69C /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086730FA2D8EB0A10088C69C /* AudioManager.swift */; };
+		086849612DACB5D400EE5342 /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086849602DACB5D400EE5342 /* Double+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		086730F42D8EB0330088C69C /* FrequencyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyType.swift; sourceTree = "<group>"; };
 		086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexInit.swift"; sourceTree = "<group>"; };
 		086730FA2D8EB0A10088C69C /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		086849602DACB5D400EE5342 /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				086730F72D8EB03F0088C69C /* UIColor+hexInit.swift */,
+				086849602DACB5D400EE5342 /* Double+extension.swift */,
 			);
 			name = Extension;
 			path = ToneCheck/Extension;
@@ -290,6 +293,7 @@
 				086730F92D8EB03F0088C69C /* UIColor+hexInit.swift in Sources */,
 				086730F62D8EB0330088C69C /* FrequencyType.swift in Sources */,
 				086730B82D8AF3D40088C69C /* SceneDelegate.swift in Sources */,
+				086849612DACB5D400EE5342 /* Double+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
