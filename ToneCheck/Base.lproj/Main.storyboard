@@ -39,6 +39,7 @@
                                             <constraint firstAttribute="height" constant="60" id="Tji-ZW-Icw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="1000Hz 40db" image="button.programmable" catalog="system">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -53,6 +54,7 @@
                                             <constraint firstAttribute="height" constant="60" id="MxB-JM-qYv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="2000Hz 40db" image="circle" catalog="system">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,6 +64,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZO3-9R-TTm" firstAttribute="top" secondItem="q3L-iW-j6h" secondAttribute="bottom" id="Bsx-jh-Zdl"/>
                                 </constraints>

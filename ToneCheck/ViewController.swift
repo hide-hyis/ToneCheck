@@ -69,17 +69,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
-        print("Do any additional setup after loading the view.")
-        
     }
     
     private func setupButtons() {
         soundOptionStackView.layer.cornerRadius = 5
-        soundOptionStackView.layer.opacity = 0.5
-        soundOptionStackView.backgroundColor = ToneCheckColor.stackViewBackground
+        soundOptionStackView.backgroundColor = .lightGray.withAlphaComponent(0.2)
         
         firstSoundOptionButton.setImage(UIImage(systemName: "button.programmable"), for: .normal)
-        firstSoundOptionButton.setTitleColor(.black, for: .normal)
         firstSoundOptionButton.titleLabel?.textColor = .black
         secondSoundOptionButton.setImage(UIImage(systemName: "circle"), for: .normal)
         
